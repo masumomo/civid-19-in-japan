@@ -1,0 +1,36 @@
+<div class="flex">
+    <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl m-2">
+                <%= @currentLocationsStatistic.name_ja %>'s Total
+            </div>
+            <p class="text-gray-700 text-base">
+                <%= @currentLocationsStatistic.total_count %>
+            </p>
+        </div>
+    </div>
+    <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl m-2">
+                <%= @currentLocationsStatistic.name_ja %>'s rate by gender
+            </div>
+            <p class="text-gray-700 text-base">
+                Male : <%= @currentLocationsStatistic.male_count %>
+                Female : <%= @currentLocationsStatistic.female_count %>
+                Unknown : <%= @currentLocationsStatistic.unknown_gender_count %>
+            </p>
+        </div>
+    </div>
+    <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
+        <div class="px-6 py-4">
+            <div class="font-bold text-xl m-2">
+                <%= @currentLocationsStatistic.name_ja %>'s rate by age
+            </div>
+            <p class="text-gray-700 text-base">
+                 0s ages : <%= @currentLocationsStatistic.male_00s %>
+                30s ages : <%= @currentLocationsStatistic.male_30s %>
+                80s ages : <%= @currentLocationsStatistic.male_80s %>
+            </p>
+        </div>
+    </div>
+</div>
