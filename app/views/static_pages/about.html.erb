@@ -1,16 +1,37 @@
-<section class="py-8 text-center content-start justify-center flex">
+<section class="py-8 content-start justify-center flex">
 
-    <div class="max-w-sm rounded overflow-hidden shadow-lg  mx-8">
+    <div class="max-w rounded overflow-hidden shadow-lg  mx-8">
         <div class="px-6 py-4">
             <div class="font-bold text-xl mb-2">About this website</div>
             <p class="text-gray-700 text-base">
-            This web app is made to learn how to use Ruby on Rails. If you are interested in codebase, please check out my repository below!
+            This web app is made to learn how to use Ruby on Rails.
+            </p>
+            <p class="text-gray-700 text-base">
+            If you are interested in codebase, please check out my repository below!
             </p>
         </div>
+        <div class="px-6 py-4 flex">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Ruby on Rails</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">PostgreSQL</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Heroku</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">HTML</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">CSS</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">JavaScript</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">TaiwindCSS</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Chart.js</span>
+        </div>
         <div class="px-6 py-4">
-        <%= link_to("Github", "https://github.com/masumomo/civid-19-in-japan",
-            {class: "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"})
-        %>
+            <%= link_to("Github", "https://github.com/masumomo/civid-19-in-japan",
+                {class: "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"})
+            %>
+        </div>
+        <div class="px-6 pt-4 pb-6">
+            <p class="text-gray-700 text-base mb-3">
+            This web app is made to learn how to use Ruby on Rails.
+            </p>
+            <%= link_to("COVID-19 Japan Web API", "https://github.com/ryo-ma/covid19-japan-web-api",
+                {class: "bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"})
+            %>
         </div>
     </div>
 </section>
