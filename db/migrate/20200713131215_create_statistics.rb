@@ -1,7 +1,7 @@
 class CreateStatistics < ActiveRecord::Migration[6.0]
   def change
     create_table  :statistics do |t|
-      t.string :name_ja
+      t.string :name_ja, unique: true
       t.integer :total_count
       t.integer :male_count
       t.integer :male_00s

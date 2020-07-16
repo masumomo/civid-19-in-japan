@@ -1,0 +1,9 @@
+.rspec
+log
+tmp
+vendor/assets
+node_modules
+
+.env
+.git
+*.md
