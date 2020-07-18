@@ -30,11 +30,11 @@
 
 /public/packs
 /public/packs-test
-/node_modules
-/vendor
+node_modules
+vendor/bundle
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
 
-*/.DS_Store
 .env
+.DS_Store

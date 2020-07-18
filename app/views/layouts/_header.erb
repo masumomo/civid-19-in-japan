@@ -12,12 +12,23 @@
   </div>
   <div class="w-full block flex-grow lg:flex lg:items-center lg:w-auto">
     <div class="text-sm lg:flex-grow">
-      <%= link_to("Overview", "#", {class: "line-through block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
       <%= link_to("Total", total_index_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
       <%= link_to("Statistics", statistic_index_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
+      <%= link_to("About", static_pages_about_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
       </div>
       <div>
-        <%= link_to("About", static_pages_about_path, {class: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"}) %>
+         <% p user_signed_in? %>
+         <% if user_signed_in? %>
+            <% p current_user %>
+            <strong>
+              <%= link_to(current_user.username, pages_show_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
+            </strong>
+            <%= link_to("Edit profile", edit_user_registration_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
+            <%= link_to("Logout", destroy_user_session_path, {method: :delete, class: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"}) %>
+          <% else %>
+            <%= link_to("Sign up", new_user_registration_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
+            <%= link_to("Login", new_user_session_path, {class: "inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"}) %>
+          <% end %>
       </div>
   </div>
 </nav>
