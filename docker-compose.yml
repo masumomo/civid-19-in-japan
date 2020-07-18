@@ -6,6 +6,7 @@ services:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
       # This should be env variable
+      # but docker-compose is used to develop local env. so It's fine
       POSTGRES_PASSWORD: password
   web:
     build: .

@@ -1,24 +1,42 @@
-# README
+# Civic-19 in Japan app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This app allow us to watch civic-19 situation in Japan.
+Here is a [demo](https://civic-19-in-japan.herokuapp.com/)!
 
-Things you may want to cover:
+# To get started in your local environment
 
-* Ruby version
+## build docker image
 
-* System dependencies
+```bash
+docker-compose build
+```
 
-* Configuration
+## run containers by docker-compose
 
-* Database creation
+```bash
+docker-compose up
+```
 
-* Database initialization
+## create database
 
-* How to run the test suite
+```bash
+docker-compose run web rake db:create
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+That's all!
 
-* Deployment instructions
+# To run rails command
 
-* ...
+You can run command in your container like ssh.
+
+```bash
+docker-compose run web bash
+```
+
+and then, you can execute command in your web container.
+
+or you can execute command like below.
+
+```bash
+docker-compose run web [command whatever you want]
+```
