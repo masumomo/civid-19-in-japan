@@ -1,5 +1,5 @@
 namespace :get_data_from_api do
-    desc "Get totals and statistics data from CIVIC-19 API"
+    desc "Get totals and statistics data from CIVID-19 API"
     task getData: :environment do
         for total in get_totals do
             upsert_total total
@@ -112,7 +112,6 @@ namespace :get_data_from_api do
 
 
         def get_statistics
-# TODO change URL
             request_api(
             "https://covid19-japan-web-api.now.sh/api/v1/statistics"
             )
