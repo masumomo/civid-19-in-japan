@@ -14,7 +14,8 @@
 
   <div class="field">
     <%= f.label :prefecture %><br />
-    <%= f.text_field :prefecture, autofocus: true %></div>
+    <  <%= f.select :prefecture, CustomType::Prefecture::List, {include_blank: true}, autofocus: true, autocomplete: "prefecture" %>
+  </div>
 
   <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />

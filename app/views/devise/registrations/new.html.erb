@@ -23,7 +23,7 @@
 
   <div class="field">
     <%= f.label :prefecture %><br />
-    <%= f.text_field :prefecture, autofocus: true %>
+    <%= f.select :prefecture, CustomType::Prefecture::List, {include_blank: true}, autofocus: true, autocomplete: "prefecture" %>
   </div>
 
   <div class="actions">
