@@ -5,7 +5,7 @@ namespace :get_data_from_api do
             upsert_total total
         end
         for statistic in get_statistics do
-            upsert_statistic convert_statistic statistic
+            upsert_statistic(convert_statistic statistic)
         end
     end
 
@@ -29,8 +29,7 @@ namespace :get_data_from_api do
             end
         end
         def convert_statistic(statistic)
-            p statistic
-            converted_statistic = {
+            return converted_statistic = {
                 name_ja: statistic["name_ja"],
                 total_count: statistic["total_count"],
                 male_count: statistic["male"]["count"],
@@ -76,8 +75,8 @@ namespace :get_data_from_api do
         end
 
         def upsert_statistic(statistic_param)
-            @statistic = Statistic.find_by name_ja: statistic_param["name_ja"]
-            puts statistic_param["name_ja"]
+            puts statistic_param
+            @statistic = Statistic.find_by name_ja: statistic_param[:name_ja]
             if @statistic == nil
                 @statistic = Statistic.new(statistic_param)
                 if @statistic.save
