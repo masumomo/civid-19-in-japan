@@ -1,7 +1,7 @@
 class TotalController < ApplicationController
     def index
         # convert to dataset for chart.js
-        @totals = Total.all
+        @totals = Total.all.order(:date)
         @totaldata = {}
         @totaldata[:labels] = []
         @totaldata[:datasets] = []
@@ -24,12 +24,8 @@ class TotalController < ApplicationController
             @totaldata[:datasets][6][:data] << total.symptom_confirming
         end
     end
-    def new
-    end
-    def show
-        # TODO Get today
-        @total = Total.find(params[:id])
-    end
+
+
     def create
         @total = Total.new(params[:total])
         @total.save

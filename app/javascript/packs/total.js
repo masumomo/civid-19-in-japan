@@ -3,7 +3,6 @@ import Chart from "chart.js";
 const ctx = document.getElementById("totalData").getContext("2d");
 // var fillPattern0 = ctx.createLinearGradient(20, 0, 220, 0);
 
-// // Add three color stops
 // fillPattern0.addColorStop(0, "#2779BD");
 // fillPattern0.addColorStop(0.5, "#1C3D5A");
 const totalData = JSON.parse(
@@ -64,7 +63,6 @@ const chart = new Chart(ctx, {
               if ((value - 1) % 10 === 0) {
                 const year = Math.floor(value / 10000);
                 const month = Math.floor((value - year * 10000) / 100);
-                console.log("value, year, month :>> ", value, year, month);
                 return `${year}/${month}`;
               }
               return "";

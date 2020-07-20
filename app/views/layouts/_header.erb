@@ -17,7 +17,6 @@
       <%= link_to("About", static_pages_about_path, {class: "block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white mr-4"}) %>
       </div>
       <div>
-         <% p user_signed_in? %>
          <% if user_signed_in? %>
             <% p current_user %>
             <strong>

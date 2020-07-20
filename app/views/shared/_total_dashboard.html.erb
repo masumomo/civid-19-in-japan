@@ -1,0 +1,15 @@
+<% @totaldata = total_by_duration Time.new, Time.new - 1.month %>
+<div class="flex">
+    <div class="w-full px-6 mb-6 rounded overflow-hidden shadow-lg">
+        <canvas id="totalData"></canvas>
+    </div>
+</div>
+<%= content_tag :div,
+    id: "totals_data",
+    data: @totaldata.to_json do %>
+<% end %>
+<%= content_tag :div,
+    id: "now",
+    data: Time.new do %>
+<% end %>
+<%= javascript_pack_tag 'total', 'data-turbolinks-track': 'reload' %>
