@@ -1,8 +1,26 @@
 module TotalHelper
+    def get_beginning_date
+        @beginning_date = Total
+        .select("date")
+        .order(:date)
+        .limit(1)[0][:date]
+    end
+    def get_latest_date
+        @latest_date = Total
+        .select("date")
+        .order("date DESC")
+        .limit(1)[0][:date]
+    end
 
     def total_by_duration(start_date, end_date)
+        if start_date.methods.include? :strftime then
+            start_date = start_date.strftime("%Y%m%d")
+        end
+        if end_date.methods.include? :strftime then
+            end_date = end_date.strftime("%Y%m%d")
+        end
         @totals = Total
-            .where("date <= ? and date >= ? ", start_date.strftime("%Y%m%d"), end_date.strftime("%Y%m%d"))
+            .where("date >= ? and date <= ? ", start_date, end_date)
             .order(:date)
         @totaldata = {}
         @totaldata[:labels] = []

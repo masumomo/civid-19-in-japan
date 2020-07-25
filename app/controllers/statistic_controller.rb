@@ -2,7 +2,7 @@ class StatisticController < ApplicationController
     def index
         # convert to dataset for chart.js
         # Shold be all
-        @currentPrefectureYesterdayStatistic = Statistic.find_by(name_ja: "東京")
+        @allPrefectureStatistic = Statistic.all
     end
 
     def create

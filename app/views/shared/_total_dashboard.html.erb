@@ -1,4 +1,4 @@
-<% @totaldata = total_by_duration Time.new, Time.new - 1.month %>
+<% @totaldata = total_by_duration Time.new - 1.month, Time.new %>
 <div class="flex">
     <div class="w-full px-6 mb-6 rounded overflow-hidden shadow-lg">
         <canvas id="totalData"></canvas>

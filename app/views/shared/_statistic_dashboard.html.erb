@@ -1,5 +1,8 @@
 
 <% @currentPrefectureStatistic = current_prefecture_statistic %>
+<% @statistic_per_gender_data = statistic_by_gender @currentPrefectureStatistic %>
+<% @statistic_per_age_data = statistic_by_age @currentPrefectureStatistic %>
+<% p @statistic_per_gender_data %>
 <div class="flex">
     <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
         <div class="px-6 py-4">
@@ -12,28 +15,21 @@
         </div>
     </div>
     <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl m-2">
-                <%= @currentPrefectureStatistic.name_ja %>'s rate by gender
-            </div>
-            <p class="text-gray-700 text-base">
-                Male : <%= @currentPrefectureStatistic.male_count %>
-                Female : <%= @currentPrefectureStatistic.female_count %>
-                Unknown : <%= @currentPrefectureStatistic.unknown_gender_count %>
-            </p>
-        </div>
+        <canvas id="statisticPerGenderData"></canvas>
     </div>
     <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl m-2">
-                <%= @currentPrefectureStatistic.name_ja %>'s rate by age
-            </div>
-            <p class="text-gray-700 text-base">
-                 0s ages : <%= @currentPrefectureStatistic.male_00s %>
-                30s ages : <%= @currentPrefectureStatistic.male_30s %>
-                80s ages : <%= @currentPrefectureStatistic.male_80s %>
-            </p>
-        </div>
+        <canvas id="statisticPerAgeData"></canvas>
     </div>
 </div>
 <h2>Last updated at <%=  @currentPrefectureStatistic.updated_at %></h2>
+<%= content_tag :div,
+    id: "statistic_per_gender_data",
+    data: @statistic_per_gender_data.to_json do %>
+<% end %>
+<%= content_tag :div,
+    id: "statistic_per_age_data",
+    data: @statistic_per_age_data.to_json do %>
+<% end %>
+
+<%= javascript_pack_tag 'statistic_per_gender', 'data-turbolinks-track': 'reload' %>
+<%= javascript_pack_tag 'statistic_per_age', 'data-turbolinks-track': 'reload' %>

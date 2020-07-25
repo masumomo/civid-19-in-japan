@@ -27,6 +27,10 @@
 </div>
 -->
 <% provide(:title, "Total") %>
+
+<% @start_date = get_beginning_date %>
+<% @end_date = get_latest_date %>
+<% @totaldata = total_by_duration @start_date, @end_date %>
 <div class="flex">
     <div class="w-full px-6 mb-6 rounded overflow-hidden shadow-lg">
         <canvas id="totalData"></canvas>
