@@ -9,32 +9,24 @@ const totalData = JSON.parse(
   document.getElementById("totals_data").getAttribute("data")
 );
 
-totalData.datasets[0].backgroundColor = "rgba(39, 121, 189, 0.2)";
-totalData.datasets[0].borderColor = "rgba(39, 121, 189, 0.8)";
-totalData.datasets[1].backgroundColor = "rgba(86, 97, 179, 0.2)";
-totalData.datasets[1].borderColor = "rgba(86, 97, 179, 0.8)";
-totalData.datasets[2].backgroundColor = "rgba(120, 23, 25, 0.2)";
-totalData.datasets[2].borderColor = "rgba(120, 23, 25, 0.8)";
-totalData.datasets[3].backgroundColor = "rgba(0, 0, 0, 0.2)";
-totalData.datasets[3].borderColor = "rgba(0, 0, 0, 0.8)";
-totalData.datasets[4].backgroundColor = "rgba(0, 0, 0, 0.2)";
-totalData.datasets[4].borderColor = "rgba(0, 0, 0, 0.8)";
-totalData.datasets[5].backgroundColor = "rgba(0, 0, 0, 0.2)";
-totalData.datasets[5].borderColor = "rgba(0, 0, 0, 0.8)";
-totalData.datasets[6].backgroundColor = "rgba(250, 187, 98, 0.2)";
-totalData.datasets[6].borderColor = "rgba(250, 187, 98, 0.8)";
+// totalData.datasets[0].backgroundColor = "rgba(39, 121, 189, 0.2)";
+// totalData.datasets[0].borderColor = "rgba(39, 121, 189, 0.8)";
+// totalData.datasets[1].backgroundColor = "rgba(86, 97, 179, 0.2)";
+// totalData.datasets[1].borderColor = "rgba(86, 97, 179, 0.8)";
+// totalData.datasets[2].backgroundColor = "rgba(120, 23, 25, 0.2)";
+// totalData.datasets[2].borderColor = "rgba(120, 23, 25, 0.8)";
+// totalData.datasets[3].backgroundColor = "rgba(0, 0, 0, 0.2)";
+// totalData.datasets[3].borderColor = "rgba(0, 0, 0, 0.8)";
+// totalData.datasets[4].backgroundColor = "rgba(0, 0, 0, 0.2)";
+// totalData.datasets[4].borderColor = "rgba(0, 0, 0, 0.8)";
+// totalData.datasets[5].backgroundColor = "rgba(0, 0, 0, 0.2)";
+// totalData.datasets[5].borderColor = "rgba(0, 0, 0, 0.8)";
+// totalData.datasets[6].backgroundColor = "rgba(250, 187, 98, 0.2)";
+// totalData.datasets[6].borderColor = "rgba(250, 187, 98, 0.8)";
 
 const chart = new Chart(ctx, {
   type: "line",
   borderWidth: 0.1,
-  // "date": 20200711, labels
-  // "pcr": 555282,
-  // "hospitalize": 2298,
-  // "positive": 21841,
-  // "severe": 34,
-  // "discharge": 18498,
-  // "death": 995,
-  // "symptom_confirming": 13
   data: totalData,
   // Configuration options go here
   options: {
@@ -42,7 +34,7 @@ const chart = new Chart(ctx, {
       padding: {
         left: 10,
         right: 10,
-        top: 20,
+        top: 10,
         bottom: 10,
       },
     },
@@ -51,7 +43,7 @@ const chart = new Chart(ctx, {
       easing: "easeInOutExpo",
     },
     title: {
-      display: true,
+      display: false,
       text: "Coronavirus (COVID-19)",
     },
     scales: {

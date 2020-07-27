@@ -1,6 +1,11 @@
 <% @totaldata = total_by_duration Time.new - 1.month, Time.new %>
 <div class="flex">
-    <div class="w-full px-6 mb-6 rounded overflow-hidden shadow-lg">
+    <div class="w-full px-6 mb-6 rounded overflow-hidden bg-white shadow-lg">
+        <div class="text-gray-700 text-2xl p-6">
+            <p class="font-bold">
+                A transitive graph for the past month
+            </p>
+    </div>
         <canvas id="totalData"></canvas>
     </div>
 </div>

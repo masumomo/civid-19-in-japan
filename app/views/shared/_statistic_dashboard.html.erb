@@ -2,26 +2,25 @@
 <% @currentPrefectureStatistic = current_prefecture_statistic %>
 <% @statistic_per_gender_data = statistic_by_gender @currentPrefectureStatistic %>
 <% @statistic_per_age_data = statistic_by_age @currentPrefectureStatistic %>
-<% p @statistic_per_gender_data %>
-<div class="flex">
-    <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
-        <div class="px-6 py-4">
-            <div class="font-bold text-xl m-2">
-                <%= @currentPrefectureStatistic.name_ja %>'s Total
-            </div>
-            <p class="text-gray-700 text-base">
-                <%= @currentPrefectureStatistic.total_count %>
+<div class="flex mb-4 bg-white shadow-lg">
+    <div class="w-1/5 p-4 m-4 rounded overflow-hidden text-left">
+        <div class="text-gray-700 text-xl">
+            <p class="font-bold">
+                Tokyo's Total
             </p>
+            <p class="text-base font-bold text-4xl m-4">
+                <%= number_with_precision(@currentPrefectureStatistic.total_count, :precision => 0, :delimiter => ',') %>
+            </p>
+            <p class="text-sm m-2">something important...</p>
         </div>
     </div>
-    <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
+    <div class="w-2/5 p-4 mr-4 mb-4 mt-4 rounded overflow-hidden border-dotted border-2 border-gray-500">
         <canvas id="statisticPerGenderData"></canvas>
     </div>
-    <div class="w-1/3 px-6 my-6 rounded overflow-hidden shadow-lg">
+    <div class="w-2/5 p-4 mr-4 mb-4 mt-4 rounded overflow-hidden border-dotted border-2 border-gray-500">
         <canvas id="statisticPerAgeData"></canvas>
     </div>
 </div>
-<h2>Last updated at <%=  @currentPrefectureStatistic.updated_at %></h2>
 <%= content_tag :div,
     id: "statistic_per_gender_data",
     data: @statistic_per_gender_data.to_json do %>
