@@ -1591,9 +1591,9 @@ Total.create(
   }
 ])
 Statistic.destroy_all
-Statistic.create([
+Statistic.create( [
   {
-    name_ja: "北海道",
+    name: "Hokkaido",
     total_count: 945,
     male_count: 426,
     male_00s: 10,
@@ -1636,7 +1636,7 @@ Statistic.create([
     unknown_gender_unknown: 23,
   },
   {
-    name_ja: "青森",
+    name: "Aomori",
     total_count: 27,
     male_count: 9,
     male_00s: 0,
@@ -1679,7 +1679,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "岩手",
+    name: "Iwate",
     total_count: 0,
     male_count: 0,
     male_00s: 0,
@@ -1722,7 +1722,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "宮城",
+    name: "Miyagi",
     total_count: 88,
     male_count: 44,
     male_00s: 3,
@@ -1765,7 +1765,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "秋田",
+    name: "Akita",
     total_count: 16,
     male_count: 10,
     male_00s: 0,
@@ -1808,7 +1808,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "山形",
+    name: "Yamagata",
     total_count: 69,
     male_count: 27,
     male_00s: 0,
@@ -1851,7 +1851,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "福島",
+    name: "Fukushima",
     total_count: 81,
     male_count: 52,
     male_00s: 1,
@@ -1894,7 +1894,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "茨城",
+    name: "Ibaraki",
     total_count: 168,
     male_count: 82,
     male_00s: 0,
@@ -1937,7 +1937,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "栃木",
+    name: "Tochigi",
     total_count: 57,
     male_count: 36,
     male_00s: 0,
@@ -1980,7 +1980,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "群馬",
+    name: "Gunma",
     total_count: 147,
     male_count: 74,
     male_00s: 1,
@@ -2023,7 +2023,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "埼玉",
+    name: "Saitama",
     total_count: 962,
     male_count: 529,
     male_00s: 6,
@@ -2066,7 +2066,7 @@ Statistic.create([
     unknown_gender_unknown: 18,
   },
   {
-    name_ja: "千葉",
+    name: "Chiba",
     total_count: 880,
     male_count: 453,
     male_00s: 4,
@@ -2109,7 +2109,7 @@ Statistic.create([
     unknown_gender_unknown: 134,
   },
   {
-    name_ja: "東京",
+    name: "Tokyo",
     total_count: 4858,
     male_count: 2785,
     male_00s: 40,
@@ -2152,7 +2152,7 @@ Statistic.create([
     unknown_gender_unknown: 1,
   },
   {
-    name_ja: "神奈川",
+    name: "Kanagawa",
     total_count: 1159,
     male_count: 649,
     male_00s: 10,
@@ -2195,7 +2195,7 @@ Statistic.create([
     unknown_gender_unknown: 2,
   },
   {
-    name_ja: "新潟",
+    name: "Niigata",
     total_count: 81,
     male_count: 41,
     male_00s: 1,
@@ -2238,7 +2238,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "富山",
+    name: "Toyama",
     total_count: 220,
     male_count: 79,
     male_00s: 4,
@@ -2281,7 +2281,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "石川",
+    name: "Ishikawa",
     total_count: 277,
     male_count: 149,
     male_00s: 2,
@@ -2324,7 +2324,7 @@ Statistic.create([
     unknown_gender_unknown: 1,
   },
   {
-    name_ja: "福井",
+    name: "Fukui",
     total_count: 122,
     male_count: 74,
     male_00s: 2,
@@ -2367,7 +2367,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "山梨",
+    name: "Yamanashi",
     total_count: 56,
     male_count: 27,
     male_00s: 0,
@@ -2410,7 +2410,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "長野",
+    name: "Nagano",
     total_count: 75,
     male_count: 44,
     male_00s: 1,
@@ -2453,7 +2453,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "岐阜",
+    name: "Gifu",
     total_count: 150,
     male_count: 77,
     male_00s: 1,
@@ -2496,7 +2496,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "静岡",
+    name: "Shizuoka",
     total_count: 73,
     male_count: 38,
     male_00s: 0,
@@ -2539,7 +2539,7 @@ Statistic.create([
     unknown_gender_unknown: 5,
   },
   {
-    name_ja: "愛知",
+    name: "Aichi",
     total_count: 501,
     male_count: 282,
     male_00s: 8,
@@ -2582,7 +2582,7 @@ Statistic.create([
     unknown_gender_unknown: 1,
   },
   {
-    name_ja: "三重",
+    name: "Mie",
     total_count: 45,
     male_count: 25,
     male_00s: 0,
@@ -2625,7 +2625,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "滋賀",
+    name: "Shiga",
     total_count: 98,
     male_count: 58,
     male_00s: 5,
@@ -2668,7 +2668,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "京都",
+    name: "Kyoto",
     total_count: 352,
     male_count: 170,
     male_00s: 4,
@@ -2711,7 +2711,7 @@ Statistic.create([
     unknown_gender_unknown: 2,
   },
   {
-    name_ja: "大阪",
+    name: "Osaka",
     total_count: 1738,
     male_count: 936,
     male_00s: 13,
@@ -2754,7 +2754,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "兵庫",
+    name: "Hyogo",
     total_count: 690,
     male_count: 392,
     male_00s: 8,
@@ -2797,7 +2797,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "奈良",
+    name: "Nara",
     total_count: 90,
     male_count: 50,
     male_00s: 0,
@@ -2840,7 +2840,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "和歌山",
+    name: "Wakayama",
     total_count: 62,
     male_count: 33,
     male_00s: 0,
@@ -2883,7 +2883,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "鳥取",
+    name: "Tottori",
     total_count: 3,
     male_count: 3,
     male_00s: 0,
@@ -2926,7 +2926,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "島根",
+    name: "Shimane",
     total_count: 24,
     male_count: 13,
     male_00s: 3,
@@ -2969,7 +2969,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "岡山",
+    name: "Okayama",
     total_count: 24,
     male_count: 14,
     male_00s: 0,
@@ -3012,7 +3012,7 @@ Statistic.create([
     unknown_gender_unknown: 1,
   },
   {
-    name_ja: "広島",
+    name: "Hiroshima",
     total_count: 165,
     male_count: 67,
     male_00s: 0,
@@ -3055,7 +3055,7 @@ Statistic.create([
     unknown_gender_unknown: 61,
   },
   {
-    name_ja: "山口",
+    name: "Yamaguchi",
     total_count: 37,
     male_count: 26,
     male_00s: 0,
@@ -3098,7 +3098,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "徳島",
+    name: "Tokushima",
     total_count: 5,
     male_count: 3,
     male_00s: 0,
@@ -3141,7 +3141,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "香川",
+    name: "Kagawa",
     total_count: 28,
     male_count: 9,
     male_00s: 0,
@@ -3184,7 +3184,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "愛媛",
+    name: "Ehime",
     total_count: 48,
     male_count: 22,
     male_00s: 0,
@@ -3227,7 +3227,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "高知",
+    name: "Kōchi",
     total_count: 74,
     male_count: 32,
     male_00s: 3,
@@ -3270,7 +3270,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "福岡",
+    name: "Fukuoka",
     total_count: 653,
     male_count: 337,
     male_00s: 8,
@@ -3313,7 +3313,7 @@ Statistic.create([
     unknown_gender_unknown: 1,
   },
   {
-    name_ja: "佐賀",
+    name: "Saga",
     total_count: 45,
     male_count: 24,
     male_00s: 0,
@@ -3356,7 +3356,7 @@ Statistic.create([
     unknown_gender_unknown: 1,
   },
   {
-    name_ja: "長崎",
+    name: "Nagasaki",
     total_count: 17,
     male_count: 9,
     male_00s: 0,
@@ -3399,7 +3399,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "熊本",
+    name: "Kumamoto",
     total_count: 48,
     male_count: 24,
     male_00s: 0,
@@ -3442,7 +3442,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "大分",
+    name: "Oita",
     total_count: 60,
     male_count: 30,
     male_00s: 0,
@@ -3485,7 +3485,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "宮崎",
+    name: "Miyazaki",
     total_count: 17,
     male_count: 10,
     male_00s: 0,
@@ -3528,7 +3528,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "鹿児島",
+    name: "Kagoshima",
     total_count: 10,
     male_count: 4,
     male_00s: 0,
@@ -3571,7 +3571,7 @@ Statistic.create([
     unknown_gender_unknown: 0,
   },
   {
-    name_ja: "沖縄",
+    name: "Okinawa",
     total_count: 142,
     male_count: 86,
     male_00s: 0,

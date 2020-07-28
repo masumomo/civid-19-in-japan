@@ -34,8 +34,8 @@ const chart = new Chart(ctx, {
       padding: {
         left: 10,
         right: 10,
-        top: 10,
-        bottom: 10,
+        top: 20,
+        bottom: 20,
       },
     },
     animation: {
@@ -51,11 +51,12 @@ const chart = new Chart(ctx, {
         {
           ticks: {
             beginAtZero: true,
-            callback: function (value) {
-              if ((value - 1) % 10 === 0) {
+            callback: function (value, i) {
+              if (i % 2 === 0) {
                 const year = Math.floor(value / 10000);
                 const month = Math.floor((value - year * 10000) / 100);
-                return `${year}/${month}`;
+                const day = Math.floor(value - year * 10000 - month * 100);
+                return `${year}/${month}/${day}`;
               }
               return "";
             },

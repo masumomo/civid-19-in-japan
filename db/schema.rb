@@ -10,13 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_18_215423) do
+ActiveRecord::Schema.define(version: 2020_07_28_121826) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "statistics", force: :cascade do |t|
-    t.string "name_ja"
     t.integer "total_count"
     t.integer "male_count"
     t.integer "male_00s"
@@ -59,6 +58,7 @@ ActiveRecord::Schema.define(version: 2020_07_18_215423) do
     t.integer "unknown_gender_unknown"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
   end
 
   create_table "totals", force: :cascade do |t|

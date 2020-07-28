@@ -8,8 +8,14 @@ const statisticPerGenderData = JSON.parse(
 const chart = new Chart(ctx, {
   type: "doughnut",
   data: statisticPerGenderData,
-  animation: {
-    duration: 3000,
-    easing: "easeInOutExpo",
+  options: {
+    animation: {
+      duration: 3000,
+      easing: "easeInOutExpo",
+    },
+    title: {
+      display: false,
+      text: "Per gender",
+    },
   },
 });

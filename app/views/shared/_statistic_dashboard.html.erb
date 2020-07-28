@@ -2,22 +2,24 @@
 <% @currentPrefectureStatistic = current_prefecture_statistic %>
 <% @statistic_per_gender_data = statistic_by_gender @currentPrefectureStatistic %>
 <% @statistic_per_age_data = statistic_by_age @currentPrefectureStatistic %>
-<div class="flex max-h-full mb-4 bg-white shadow-lg">
-    <div class="w-1/5 p-4 m-4 rounded overflow-hidden text-left">
-        <div class="text-gray-700 text-xl">
+<div class="h-auto p-2 lg:p-4 mb-4 bg-white shadow-lg flex-col lg:flex lg:flex-row">
+    <div class="w-full lg:w-1/5 p-2 rounded overflow-hidden text-left flex justify-center">
+        <div class="text-gray-700 text-xl p-4">
             <p class="font-bold">
-                Tokyo's Total
+                <%= @currentPrefectureStatistic.name %> reports
             </p>
-            <p class="text-base font-bold text-4xl m-4">
+            <p class="text-base font-bold text-4xl mr-4 ml-4 mt-4">
                 <%= number_with_precision(@currentPrefectureStatistic.total_count, :precision => 0, :delimiter => ',') %>
             </p>
-            <p class="text-sm m-2">something important...</p>
+            <p class="text-sm text-right mr-2">cases</p>
         </div>
     </div>
-    <div class="w-2/5 p-4 mr-4 mb-4 mt-4 rounded overflow-hidden border-dotted border-2 border-gray-500">
+    <div class="w-auto lg:w-2/5 p-2 mb-2 lg:mr-2 lg:mb-2 lg:mt-2 rounded overflow-hidden border-dotted border-2 border-gray-500">
+        <p class="font-bold">By gender</p>
         <canvas id="statisticPerGenderData"></canvas>
     </div>
-    <div class="w-2/5 p-4 mr-4 mb-4 mt-4 rounded overflow-hidden border-dotted border-2 border-gray-500">
+    <div class="w-auto lg:w-2/5 p-2 lg:mr-2 lg:mb-2 lg:mt-2 rounded overflow-hidden border-dotted border-2 border-gray-500">
+        <p class="font-bold"> By age</p>
         <canvas id="statisticPerAgeData"></canvas>
     </div>
 </div>

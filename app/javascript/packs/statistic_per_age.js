@@ -8,8 +8,14 @@ const statisticPerAgeData = JSON.parse(
 const chart = new Chart(ctx, {
   type: "bar",
   data: statisticPerAgeData,
-  animation: {
-    duration: 3000,
-    easing: "easeInOutExpo",
+  options: {
+    animation: {
+      duration: 3000,
+      easing: "easeInOutExpo",
+    },
+    title: {
+      display: false,
+      text: "Per age",
+    },
   },
 });

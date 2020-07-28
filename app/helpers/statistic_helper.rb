@@ -1,9 +1,9 @@
 module StatisticHelper
     def current_prefecture_statistic
         if user_signed_in?
-            @current_prefecture_statistic = Statistic.find_by(name_ja: current_user.prefecture)
+            @current_prefecture_statistic = Statistic.find_by(name: current_user.prefecture)
         else
-            @current_prefecture_statistic = Statistic.find_by(name_ja: "東京")
+            @current_prefecture_statistic = Statistic.find_by(name: "Tokyo")
         end
     end
 
@@ -11,6 +11,7 @@ module StatisticHelper
         @statisticdata = {}
         @statisticdata[:labels] = ["Male","Female", "Unknown"]
         @statisticdata[:datasets] = [{
+            label: "Positives",
             data:[
                 statistic.male_count,
                 statistic.female_count,
@@ -24,6 +25,7 @@ module StatisticHelper
         @statisticdata = {}
         @statisticdata[:labels] = ["00s","10s", "20s","30s","40s", "50s", "60s","70s", "80s","90s","100s"]
         @statisticdata[:datasets] = [{
+            label: "Positives",
             data:[
                 statistic.male_00s + statistic.female_00s + statistic.unknown_gender_00s,
                 statistic.male_10s + statistic.female_10s + statistic.unknown_gender_10s,
