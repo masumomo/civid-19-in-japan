@@ -72,6 +72,5 @@ Rails.application.configure do
     user_name: Rails.application.credentials.google[:gmail_address] ,
     password: Rails.application.credentials.google[:gmail_password],
     authentication:'plain',
-    enable_starttls_auto: true
   }
 end
