@@ -30,7 +30,7 @@ namespace :get_data_from_api do
         end
         def convert_statistic(statistic)
             return converted_statistic = {
-                name: statistic["name"],
+                name: statistic["name_en"],
                 total_count: statistic["total_count"],
                 male_count: statistic["male"]["count"],
                 male_00s: statistic["male"]["generations_count"]["00s"],
