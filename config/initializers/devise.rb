@@ -309,8 +309,12 @@ Devise.setup do |config|
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
 
-
-  config.omniauth :twitter, Rails.application.credentials.twitter[:api_key],  Rails.application.credentials.twitter[:api_secret], scope: 'email', oauth_callback: "#{Rails.application.credentials.host}/users/auth/twitter/callback"
-  config.omniauth :google_oauth2, Rails.application.credentials.google[:client_id], Rails.application.credentials.google[:client_secret], scope: 'email', redirect_uri: "#{Rails.application.credentials.host}/users/auth/google_oauth2/callback"
+  if Rails.env.development? do
+    config.omniauth :twitter, Rails.application.credentials.twitter[:api_key],  Rails.application.credentials.twitter[:api_secret], scope: 'email', oauth_callback: "#{Rails.application.credentials.host}/users/auth/twitter/callback"
+    config.omniauth :google_oauth2, Rails.application.credentials.google[:client_id], Rails.application.credentials.google[:client_secret], scope: 'email', redirect_uri: "#{Rails.application.credentials.host}/users/auth/google_oauth2/callback"
+  else
+    config.omniauth :twitter, ENV[TWITTER_API_KEY],  ENV[TWITTER_API_SECRET], scope: 'email', oauth_callback: "#{ENV[HOST]}/users/auth/twitter/callback"
+    config.omniauth :google_oauth2, ENV[GOOGLE_CLIENT_ID], ENV[GOOGLE_CLIENT_SECRET], scope: 'email', redirect_uri: "#{ENV[HOST]}/users/auth/google_oauth2/callback"
+  end
   OmniAuth.config.logger = Rails.logger if Rails.env.development?
 end
