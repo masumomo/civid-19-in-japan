@@ -1,17 +1,34 @@
-<%- if controller_name != 'sessions' %>
-  <%= link_to "Log in", new_user_session_path(resource_name) %><br />
-<% end %>
-
-<%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-  <%= link_to "Sign up", new_user_registration_path(resource_name) %><br />
-<% end %>
-
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <%= link_to "Forgot your password?", new_user_password_path(resource_name) %><br />
-<% end %>
-
+<div class="md:flex md:items-center">
+  <div class="md:w-1/3"></div>
+  <%- if controller_name != 'sessions' %>
+    <label class="md:w-2/3 block text-teal-500 hover:text-teal-800 text-sm pt-2 px-4">
+      <%= link_to "Log in", new_user_session_path(resource_name) %>
+    </label>
+  <% end %>
+  </div>
+<div class="md:flex md:items-center">
+    <div class="md:w-1/3"></div>
+    <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+      <label class="md:w-2/3 block text-teal-500 hover:text-teal-800 text-sm pt-2 px-4">
+        <%= link_to "Sign up", new_user_registration_path(resource_name) %>
+      </label>
+    <% end %>
+</div>
+<div class="md:flex md:items-center">
+    <div class="md:w-1/3"></div>
+    <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+      <label class="md:w-2/3 block text-teal-500 hover:text-teal-800 text-sm pt-2 px-4">
+        <%= link_to "Forgot your password?", new_user_password_path(resource_name) %>
+      </label>
+    <% end %>
+</div>
 <%- if devise_mapping.omniauthable? %>
   <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %><br />
+    <div class="md:flex md:items-center">
+      <div class="md:w-1/3"></div>
+      <label class="md:w-2/3 block text-teal-500 hover:text-teal-800 text-sm pt-2 px-4">
+        <%= link_to "Sign in with #{OmniAuth::Utils.camelize(provider)}", omniauth_authorize_path(resource_name, provider) %>
+      </label>
+    </div>
   <% end %>
 <% end %>
